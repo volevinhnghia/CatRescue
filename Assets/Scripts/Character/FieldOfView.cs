@@ -81,6 +81,8 @@ public class FieldOfView : MonoBehaviour
                 }
             }
         }
+
+        //In case target out of Player FOV, call function restart coroutine
         foreach (Transform target in targetsInFOV) 
         {
             if (!currentFrameTargets.Contains(target)) {
