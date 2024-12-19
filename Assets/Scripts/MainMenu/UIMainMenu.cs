@@ -23,9 +23,9 @@ public class UIMainMenu : MonoBehaviour
     }
     private void UpdateValue() 
     {
-        _speedText.GetComponent<TextMeshProUGUI>().SetText($"Speed: {_stats.getSpeed()}");
-        _moneyText.GetComponent<TextMeshProUGUI>().SetText($"Money: {_stats.getMoney()}");
-        if (_stats.getMoney() < 30f)
+        _speedText.GetComponent<TextMeshProUGUI>().SetText($"Speed: {_stats.GetSpeed()}");
+        _moneyText.GetComponent<TextMeshProUGUI>().SetText($"Money: {_stats.GetMoney()}");
+        if (_stats.GetMoney() < 30f)
         {
             _upgradeButton.GetComponent<Button>().enabled = false;
         }
@@ -37,8 +37,8 @@ public class UIMainMenu : MonoBehaviour
     }
     public void speedUpgrade() 
     {
-        _stats.setSpeed(3);
-        _stats.setMoney(-30);
+        _stats.SetSpeed(3);
+        _stats.SetMoney(-30);
     }
     public void gameStart()
     {

@@ -31,7 +31,7 @@ public class TsunamiBehaviour : MonoBehaviour
     //Change stage to GameOver when Tsunami hit player
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other != null && other.gameObject.tag == "Player")
         {
             StageManager.Instance.UpdateGameStage(GameStage.GameOver);
         }

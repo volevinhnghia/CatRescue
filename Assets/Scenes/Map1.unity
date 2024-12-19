@@ -2222,17 +2222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9500c5501c5f44d4d806d80e5064d037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 10
-  viewAngle: 90
-  targetMask:
+  ViewRadius: 10
+  ViewAngle: 90
+  TargetMask:
     serializedVersion: 2
     m_Bits: 256
-  obstacleMask:
+  ObstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  targetsInFOV: []
-  segments: 50
-  coneColor: {r: 1, g: 1, b: 0, a: 0.5}
+  TargetsInFOV: []
+  Segments: 50
+  ConeColor: {r: 1, g: 1, b: 0, a: 0.5}
 --- !u!4 &1127314948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c498d542402b1e41b0b08aeffd49a59,
@@ -3269,7 +3269,6 @@ GameObject:
   - component: {fileID: 2021165534}
   - component: {fileID: 2021165540}
   - component: {fileID: 2021165541}
-  - component: {fileID: 2021165542}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -3529,19 +3528,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a01fe159cd4d8c4bae25ddafc389e72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stats: {fileID: 11400000, guid: 889e9ad64b2ed1b44bb617bfcce5d492, type: 2}
---- !u!114 &2021165542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021165533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e345963550a38ec47b9dd1c0c229b470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _stats: {fileID: 11400000, guid: 889e9ad64b2ed1b44bb617bfcce5d492, type: 2}

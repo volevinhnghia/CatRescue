@@ -5,16 +5,16 @@ using UnityEngine;
 public class Inventory 
 {
     private int _catRescueCnt = 0;
-    private List<GameObject> list;
+    private List<GameObject> _list;
 
-    public void resetInventory() { 
-        list = new List<GameObject>();
+    public void resetInventory() {
+        _list = new List<GameObject>();
     }
     public void addCat(GameObject cat) 
     {
-        list.Add(cat);
+        _list.Add(cat);
     }
-    public int getCat() { return list.Count; }
+    public int getCat() { return _list.Count; }
 
 
 }

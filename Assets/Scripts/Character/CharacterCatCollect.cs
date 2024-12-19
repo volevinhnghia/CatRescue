@@ -4,12 +4,12 @@ using Watermelon;
 public class CharacterCatCollect : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private Inventory inventory;
+    private Inventory _inventory;
     [SerializeField] private CharacterStats _stats;
     private void Awake()
     {
-        inventory = new Inventory();
-        inventory.resetInventory();
+        _inventory = new Inventory();
+        _inventory.resetInventory();
     }
     void Start()
     {
@@ -25,7 +25,7 @@ public class CharacterCatCollect : MonoBehaviour
     //Counting how many cat player rescue
     private void CatBehaviour_OnPickUpCat(Transform obj)
     {
-        inventory.addCat(obj.gameObject);
+        _inventory.addCat(obj.gameObject);
         
     }
 
@@ -36,6 +36,6 @@ public class CharacterCatCollect : MonoBehaviour
         {
             return;
         }
-        _stats.setMoney(inventory.getCat() * 10);
+        _stats.SetMoney(_inventory.getCat() * 10);
     }
 }

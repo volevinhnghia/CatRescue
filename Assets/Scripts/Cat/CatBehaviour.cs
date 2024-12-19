@@ -5,46 +5,35 @@ using UnityEngine;
 public class CatBehaviour : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private float destroyDelay = 1.5f;
+    private float _destroyDelay = 1.5f;
 
-    private bool isCoroutineRun = false;
-    private Coroutine countdownCoroutine;
+    private bool _isCoroutineRun = false;
+    private Coroutine _countdownCoroutine;
 
     public static event Action<Transform> OnPickUpCat;
-    void Start()
-    {
-    }
-    private void OnDestroy()
-    {
-    }
 
     //Start coroutine and pick up after delay time
     public void FieldOfView_OnEnterFOV(Transform obj)
     {
-        if (!isCoroutineRun)
+        if (!_isCoroutineRun)
         {
-            countdownCoroutine = StartCoroutine(DestroyAfterSeconds(obj));
-            isCoroutineRun = true;
+            _countdownCoroutine = StartCoroutine(DestroyAfterSeconds(obj));
+            _isCoroutineRun = true;
         }
     }
     //when object get out Player's FOV -> stop coroutine
     public void FieldOfView_OnExitFOV(Transform obj)
     {
-        if (isCoroutineRun)
+        if (_isCoroutineRun)
         {
-            StopCoroutine(countdownCoroutine);
-            isCoroutineRun = false;
+            StopCoroutine(_countdownCoroutine);
+            _isCoroutineRun = false;
         }
     }
     private IEnumerator DestroyAfterSeconds(Transform obj)
     {
-        yield return new WaitForSeconds(destroyDelay);
+        yield return new WaitForSeconds(_destroyDelay);
         OnPickUpCat?.Invoke(obj);
         Destroy(obj.gameObject);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

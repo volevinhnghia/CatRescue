@@ -11,12 +11,6 @@ public class StageManager : MonoBehaviour
     {
         Instance = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
    
     public void UpdateGameStage(GameStage gameStage)
     {

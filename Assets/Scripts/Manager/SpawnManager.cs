@@ -15,13 +15,13 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private GameObject _Border;
 
-    private Vector3 initPos;
+    private Vector3 _initPos;
     void Start()
     {
         CharacterMovement.OnStartSpawn += TriggerSpawn;
 
         //Get player init position
-        initPos = transform.position;
+        _initPos = transform.position;
 
         //Spawn Init object at begin
         InitSpawn(_cat, _CatsContainer, _RoadContainer);

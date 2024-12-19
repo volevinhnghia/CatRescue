@@ -44,7 +44,7 @@ public class CharacterMovement : MonoBehaviour
         if (inputValue == Vector2.zero) return;
         
         //Get speed from scriptable object stats and caclulate direction from input
-        float speed = _stats.getSpeed();
+        float speed = _stats.GetSpeed();
         Vector3 moveDirection = new Vector3(inputValue.y, 0, -inputValue.x);
         _characterController.Move(moveDirection * speed * Time.deltaTime);
 

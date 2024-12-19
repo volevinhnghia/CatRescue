@@ -5,17 +5,13 @@ using UnityEngine;
 public class CharacterStats : ScriptableObject
 {
     [SerializeField]
-    private float speed;
+    private float _speed;
     [SerializeField]
-    private float money;
-    [SerializeField]
-    private int level;
+    private float _money;
 
-    public float getSpeed() { return speed; }
-    public float getMoney() { return money; }
-    public int getLevel() { return level; }
-    public void setSpeed(float speed) { this.speed += speed; }
-    public void setMoney(float money) {  this.money += money; }
+    public float GetSpeed() { return _speed; }
+    public float GetMoney() { return _money; }
+    public void SetSpeed(float speed) { this._speed += speed; }
+    public void SetMoney(float money) {  this._money += money; }
 
-    public void setLevel() { this.level++; }
 }
