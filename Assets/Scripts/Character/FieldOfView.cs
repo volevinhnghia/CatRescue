@@ -5,7 +5,7 @@ using static UnityEngine.Rendering.HableCurve;
 
 public class FieldOfView : MonoBehaviour
 {
-    public float ViewRadius = 10f; // Distance of the FoV
+    public float ViewRadius = 4f; // Distance of the FoV
     [Range(0, 360)]
     public float ViewAngle = 90f; // Angle of the cone
 
@@ -17,6 +17,7 @@ public class FieldOfView : MonoBehaviour
     public int Segments = 50;
     public Color ConeColor = new Color(1, 1, 0, 0.5f); // Semi-transparent yellow color
 
+    [SerializeField] private Material _coneMat;
     private Mesh _mesh; // Mesh for the cone
     private MeshRenderer _meshRenderer;
     private MeshFilter _meshFilter;
@@ -45,8 +46,8 @@ public class FieldOfView : MonoBehaviour
         _meshFilter = gameObject.AddComponent<MeshFilter>();
         _meshRenderer = gameObject.AddComponent<MeshRenderer>();
 
-        // Create a transparent material using "Unlit/Transparent" shader
-        Material coneMaterial = new Material(Shader.Find("Unlit/Transparent"));
+        
+        Material coneMaterial = _coneMat;
         coneMaterial.color = new Color(1f, 1f, 0f, 0.5f); // Yellow with 50% transparency
         _meshRenderer.material = coneMaterial;
 

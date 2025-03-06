@@ -5,7 +5,7 @@ using UnityEngine;
 public class CatBehaviour : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private float _destroyDelay = 1.5f;
+    private float _destroyDelay = 0.1f;
 
     private bool _isCoroutineRun = false;
     private Coroutine _countdownCoroutine;

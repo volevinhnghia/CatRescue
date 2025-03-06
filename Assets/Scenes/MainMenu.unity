@@ -239,6 +239,7 @@ MonoBehaviour:
   _stats: {fileID: 11400000, guid: 889e9ad64b2ed1b44bb617bfcce5d492, type: 2}
   _speedText: {fileID: 675928548}
   _moneyText: {fileID: 174589995}
+  _upgradeButton: {fileID: 845517852}
 --- !u!1 &174589995
 GameObject:
   m_ObjectHideFlags: 0

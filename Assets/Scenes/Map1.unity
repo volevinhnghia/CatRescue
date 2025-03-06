@@ -2204,7 +2204,7 @@ Transform:
   m_GameObject: {fileID: 1101576438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2233,6 +2233,7 @@ MonoBehaviour:
   TargetsInFOV: []
   Segments: 50
   ConeColor: {r: 1, g: 1, b: 0, a: 0.5}
+  _coneMat: {fileID: 2100000, guid: af6fd1747a91e0f4f86e62ed2de2ae02, type: 2}
 --- !u!4 &1127314948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c498d542402b1e41b0b08aeffd49a59,
@@ -3514,7 +3515,7 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
